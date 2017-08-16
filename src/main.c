@@ -22,6 +22,7 @@ typedef struct {
   GtkEntry       *g_entry_server;
   GtkEntry       *g_entry_port;
   GtkEntry       *g_entry_callsign;
+  GtkButton      *g_btn_connect;
 } app_widgets;
 
 int main(int argc, char *argv[])
@@ -49,6 +50,7 @@ int main(int argc, char *argv[])
     widgets->g_entry_server  = GTK_ENTRY(gtk_builder_get_object(builder, "entryServer"));
     widgets->g_entry_port  = GTK_ENTRY(gtk_builder_get_object(builder, "entryPort"));
     widgets->g_entry_callsign  = GTK_ENTRY(gtk_builder_get_object(builder, "entryCallsign"));
+    widgets->g_btn_connect  = GTK_ENTRY(gtk_builder_get_object(builder, "btnConnect"));
 
 
     g_object_unref(builder);
@@ -74,12 +76,45 @@ void on_btn_connect_clicked(GtkButton *button, app_widgets *app_wdgts) {
     const gchar *entry_callsign;
     entry_callsign =   gtk_entry_get_text (app_wdgts->g_entry_callsign);
 
+    gtk_widget_set_sensitive (app_wdgts->g_btn_connect, FALSE);
+
+    if(strlen(entry_server) == 0) {
+        gtk_widget_set_sensitive (app_wdgts->g_btn_connect, TRUE);
+	return;
+    };
+
+    if(strlen(entry_port) == 0) {
+        gtk_widget_set_sensitive (app_wdgts->g_btn_connect, TRUE);
+	return;
+    };
+
+    if(strlen(entry_callsign) == 0) {
+        gtk_widget_set_sensitive (app_wdgts->g_btn_connect, TRUE);
+	return;
+    };
+
+
+
     int t;
-    t = telnet(entry_server,entry_port);
+    t = telnet(entry_server,entry_port,entry_callsign);
+
+    gtk_widget_set_sensitive (app_wdgts->g_btn_connect, TRUE);
+//    gtk_button_set_label (app_wdgts->g_btn_connect, 'Disconnect');
+
 
 }
 
 //--------------------------- TELNET -------
+
+
+char* concat(const char *s1, const char *s2)
+{
+    char *result = malloc(strlen(s1)+strlen(s2)+1);//+1 for the zero-terminator
+    //in real code you would check for errors in malloc here
+    strcpy(result, s1);
+    strcat(result, s2);
+    return result;
+}
 
 void negotiate(int sock, unsigned char *buf, int len) {
     int i;
@@ -124,11 +159,12 @@ static void terminal_reset(void) {
 }
 
 
-int telnet(char server_i[], char port_i[]) {
+int telnet(char server_i[], char port_i[], char callsign_i[]) {
     int sock;
     struct sockaddr_in server;
     unsigned char buf[BUFLEN + 1];
     int len;
+    int ft = 1;
 
     //Create socket
     sock = socket(AF_INET , SOCK_STREAM , 0);
@@ -159,9 +195,11 @@ int telnet(char server_i[], char port_i[]) {
     struct timeval ts;
     ts.tv_sec = 1; // 1 second
     ts.tv_usec = 0;
-
+ 
+    //LOOP
     while (1) {
         // select setup
+
         fd_set fds;
         FD_ZERO(&fds);
         if (sock != 0)
@@ -175,6 +213,13 @@ int telnet(char server_i[], char port_i[]) {
             return 1;
         }
         else if (nready == 0) {
+
+	 if (ft == 1) {
+            ft=0;
+            static char crlf[] = { '\r','n' };
+            if (send(sock, concat(callsign_i,crlf), strlen(callsign_i)+2, 0) < 0) 
+	       return 1;
+          } 
             ts.tv_sec = 1; // 1 second
             ts.tv_usec = 0;
         }
@@ -208,11 +253,11 @@ int telnet(char server_i[], char port_i[]) {
         }
 
         else if (FD_ISSET(0, &fds)) {
-            buf[0] = getc(stdin); //fgets(buf, 1, stdin);
-            if (send(sock, buf, 1, 0) < 0)
-                return 1;
-            if (buf[0] == '\n') // with the terminal in raw mode we need to force a LF
-                putchar('\r');
+   	    buf[0] = getc(stdin); //fgets(buf, 1, stdin);
+           if (send(sock, buf, 1, 0) < 0)
+	    return 1;
+	   if (buf[0] == '\n') // with the terminal in raw mode we need to force a LF
+	     putchar('\r');
         }
     }
     close(sock);

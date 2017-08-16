@@ -1,5 +1,5 @@
 # change application name here (executable output name)
-TARGET=dxcluster
+TARGET=gdx
 
 # compiler
 CC=gcc
