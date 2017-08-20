@@ -423,6 +423,7 @@
                     <property name="can_focus">True</property>
                     <property name="max_length">255</property>
                     <property name="invisible_char">●</property>
+                    <property name="text" translatable="yes">73.98.218.154</property>
                   </object>
                   <packing>
                     <property name="expand">True</property>
@@ -449,8 +450,10 @@
                     <property name="max_length">6</property>
                     <property name="invisible_char">●</property>
                     <property name="width_chars">5</property>
+                    <property name="text" translatable="yes">7300</property>
                     <property name="caps_lock_warning">False</property>
                     <property name="input_purpose">number</property>
+                    <signal name="key-press-event" handler="key_event_numeric_check" swapped="no"/>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -477,6 +480,7 @@
                     <property name="max_length">12</property>
                     <property name="invisible_char">●</property>
                     <property name="width_chars">12</property>
+                    <property name="text" translatable="yes">iu1bow</property>
                     <property name="caps_lock_warning">False</property>
                   </object>
                   <packing>
@@ -487,13 +491,11 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="btnConnect">
-                    <property name="label">gtk-connect</property>
+                    <property name="label" translatable="yes">VOID</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
-                    <property name="use_stock">True</property>
-                    <property name="always_show_image">True</property>
-                    <signal name="clicked" handler="on_btn_connect_clicked" swapped="no"/>
+                    <signal name="clicked" handler="on_swtch_connect_on" swapped="no"/>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -508,6 +510,69 @@
             <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkInfoBar" id="infoBar">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child internal-child="action_area">
+              <object class="GtkButtonBox">
+                <property name="can_focus">False</property>
+                <property name="spacing">6</property>
+                <property name="layout_style">end</property>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child internal-child="content_area">
+              <object class="GtkBox">
+                <property name="can_focus">False</property>
+                <property name="spacing">16</property>
+                <child>
+                  <object class="GtkLabel" id="lblConnectionInfo">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+                <child>
+                  <placeholder/>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
           </packing>
         </child>
         <child>
@@ -1064,7 +1129,7 @@
           <packing>
             <property name="expand">True</property>
             <property name="fill">True</property>
-            <property name="position">1</property>
+            <property name="position">2</property>
           </packing>
         </child>
         <child>
@@ -1291,7 +1356,7 @@
             <property name="expand">True</property>
             <property name="fill">False</property>
             <property name="pack_type">end</property>
-            <property name="position">2</property>
+            <property name="position">3</property>
           </packing>
         </child>
       </object>
