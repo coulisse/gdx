@@ -4,7 +4,6 @@ TODO: error managing
 TODO: trim input fields
 TODO: dialog between terminal and gtk
 TODO: get connection error (and reset the connection button)
-TODO: time out and kill process
 
 */
 
@@ -15,6 +14,7 @@ typedef struct {
   char tags[10];
   char comments[255];
   int utc;
+  int date;
 } dxc;
 
 typedef struct {
@@ -23,6 +23,8 @@ typedef struct {
   char *entry_callsign;
  // short connection_status_request;
   enum status_request {disconnect=-1, nothing, login} connection_status_request;
+  char msg[128];
+  enum rc {waiting=-1, ok, ko} telnet_rc;
   short connected;
 } glb;
 
@@ -41,6 +43,8 @@ pthread_mutex_t mutexLock;
 
 #include "utility.h"
 #include "labels.h"
+
+
 
 
 typedef struct {
@@ -95,6 +99,8 @@ widgets = g_slice_new(app_widgets);
 }
 
 
+
+
 // called when connect button is clicked
 void on_swtch_connect_on(GtkButton *button, app_widgets *app_wdgts) {
 
@@ -131,13 +137,12 @@ void on_swtch_connect_on(GtkButton *button, app_widgets *app_wdgts) {
     pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
     pthread_create (&thread_id,  &attr, &telnet, NULL);
 
-    //gtk_button_set_label(button,LBL_DISCONNECT);
+    gtk_button_set_label(button,LBL_DISCONNECT);
 
   } else {
 
     //disconnect
     thread_glb.connection_status_request = disconnect;
-//TODO: kill the process if it's not respond?
     gtk_label_set_text (app_wdgts->g_lbl_connection_info,LBL_DISCONNECTING);
     gtk_button_set_label(button,LBL_CONNECT);
   }

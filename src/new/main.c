@@ -3,8 +3,10 @@ TODO: resolve domain
 TODO: error managing
 TODO: trim input fields
 TODO: dialog between terminal and gtk
+TODO: split telnet and gui modules
+TODO: communication queues?!
 TODO: get connection error (and reset the connection button)
-TODO: time out and kill process
+TODO: start thread at the init
 
 */
 
@@ -15,6 +17,7 @@ typedef struct {
   char tags[10];
   char comments[255];
   int utc;
+  int date;
 } dxc;
 
 typedef struct {
@@ -22,8 +25,9 @@ typedef struct {
   char *entry_port;
   char *entry_callsign;
  // short connection_status_request;
-  enum status_request {disconnect=-1, nothing, login} connection_status_request;
-  short connected;
+  enum status_request {disconnect=-1, nothing, login, end} connection_status_request;
+  char msg[255];
+  dxc dxcluster_record;
 } glb;
 
 
@@ -37,10 +41,13 @@ typedef struct {
 
 glb thread_glb;
 pthread_t thread_id;
-pthread_mutex_t mutexLock;
+pthread_mutex_t mutexConn;
+pthread_cond_t mutexLogin;
+pthread_attr_t attr;
 
 #include "utility.h"
 #include "labels.h"
+#include "telnet.h"
 
 
 typedef struct {
@@ -52,18 +59,20 @@ typedef struct {
 } app_widgets;
 
 
-app_widgets     *widgets;
-
-#include "telnet.h"
 //GUI
 int main(int argc, char *argv[]) {
     GtkBuilder      *builder;
     GtkWidget       *window;
-    //app_widgets     *widgets = g_slice_new(app_widgets);
-widgets = g_slice_new(app_widgets);
+    app_widgets     *widgets = g_slice_new(app_widgets);
 
     thread_glb.connection_status_request=nothing;
-
+    //creating thread for telnet
+    pthread_mutex_init(&mutexConn, NULL);
+    pthread_cond_init (&mutexLogin, NULL);
+    pthread_attr_init(&attr);
+    pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
+    pthread_create (&thread_id,  &attr, &telnet, NULL);
+    
     gtk_init(&argc, &argv);
     builder = gtk_builder_new();
     GError *err = NULL;
@@ -122,22 +131,18 @@ void on_swtch_connect_on(GtkButton *button, app_widgets *app_wdgts) {
     };
 
     gtk_label_set_text (app_wdgts->g_lbl_connection_info,LBL_CONNECTING);
+
+    pthread_mutex_lock(&mutexConn);
     thread_glb.connection_status_request = login;
+    pthread_cond_signal(&mutexLogin);
+    pthread_mutex_unlock(&mutexConn);
 
-    //creating thread
-    pthread_mutex_init(&mutexLock, NULL);
-    pthread_attr_t attr;
-    pthread_attr_init(&attr);
-    pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
-    pthread_create (&thread_id,  &attr, &telnet, NULL);
-
-    //gtk_button_set_label(button,LBL_DISCONNECT);
+    gtk_button_set_label(button,LBL_DISCONNECT);
 
   } else {
 
     //disconnect
     thread_glb.connection_status_request = disconnect;
-//TODO: kill the process if it's not respond?
     gtk_label_set_text (app_wdgts->g_lbl_connection_info,LBL_DISCONNECTING);
     gtk_button_set_label(button,LBL_CONNECT);
   }
@@ -147,15 +152,19 @@ void on_swtch_connect_on(GtkButton *button, app_widgets *app_wdgts) {
 void on_window_main_destroy() {
     void *status;
     int rc;
-
-    thread_glb.connection_status_request=disconnect;
+ 
+    thread_glb.connection_status_request=end;
     if (thread_id>0) { 
         rc = pthread_join(thread_id, &status);
 	if (rc) {
 	   printf("ERROR; return code from pthread_join() is %d\n", rc);
 	}
      };
-    pthread_mutex_destroy(&mutexLock);
+    
+    pthread_attr_destroy(&attr);
+    pthread_mutex_destroy(&mutexConn);
+    pthread_cond_destroy(&mutexLogin);
+
     gtk_main_quit();
 }
 
@@ -206,7 +215,4 @@ void key_event_numeric_check(GtkWidget *widget, GdkEventKey *event) {
       #pragma GCC diagnostic warning "-Wformat-zero-length"
   }
   return;
-
 }
-
-

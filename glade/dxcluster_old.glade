@@ -491,7 +491,7 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="btnConnect">
-                    <property name="label" translatable="yes">CONNECT</property>
+                    <property name="label" translatable="yes">[CONNECT]</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -1366,4 +1366,3 @@
     </child>
   </object>
 </interface>
-
