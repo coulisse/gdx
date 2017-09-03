@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.20.0 -->
+<!-- Generated with glade 3.20.0 
+
+Copyright (C) 2017
+
+This file is part of gdx.
+
+gdx is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+gdx is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with gdx.  If not, see <http://www.gnu.org/licenses/>.
+
+Author: Corrado Gerbaldo
+
+-->
 <interface>
   <requires lib="gtk+" version="3.6"/>
+  <!-- interface-license-type gplv3 -->
+  <!-- interface-name gdx -->
+  <!-- interface-description Hamradio DX cluster browser with gtk -->
+  <!-- interface-copyright 2017 -->
+  <!-- interface-authors Corrado Gerbaldo -->
   <object class="GtkListStore" id="liststoreCluster">
     <columns>
       <!-- column-name de -->
@@ -10,382 +36,32 @@
       <column type="gchararray"/>
       <!-- column-name dx -->
       <column type="gchararray"/>
-      <!-- column-name tags -->
+      <!-- column-name utc -->
+      <column type="gchararray"/>
+      <!-- column-name locator -->
       <column type="gchararray"/>
       <!-- column-name comments -->
       <column type="gchararray"/>
-      <!-- column-name utc -->
+      <!-- column-name band -->
       <column type="gchararray"/>
-      <!-- column-name date -->
+      <!-- column-name dx_entity -->
+      <column type="gchararray"/>
+      <!-- column-name dx_continent -->
+      <column type="gchararray"/>
+      <!-- column-name de_entity -->
+      <column type="gchararray"/>
+      <!-- column-name de_continent -->
       <column type="gchararray"/>
     </columns>
-    <data>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">iu1bow</col>
-        <col id="1" translatable="yes">14.150</col>
-        <col id="2" translatable="yes">ind324</col>
-        <col id="3" translatable="yes">xxx</col>
-        <col id="4" translatable="yes">prova di un commento</col>
-        <col id="5" translatable="yes">12:00</col>
-        <col id="6" translatable="yes">01/01/2017</col>
-      </row>
-    </data>
+  </object>
+  <object class="GtkTreeModelFilter" id="treeModelFilterCluster">
+    <property name="child_model">liststoreCluster</property>
   </object>
   <object class="GtkWindow" id="mainWindow">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">DxCluster</property>
     <property name="window_position">mouse</property>
+    <property name="icon">cluster.png</property>
     <signal name="destroy" handler="on_window_main_destroy" swapped="no"/>
     <child>
       <object class="GtkBox" id="box1">
@@ -423,7 +99,7 @@
                     <property name="can_focus">True</property>
                     <property name="max_length">255</property>
                     <property name="invisible_char">●</property>
-                    <property name="text" translatable="yes">73.98.218.154</property>
+                    <property name="text" translatable="yes">hamqth.com</property>
                   </object>
                   <packing>
                     <property name="expand">True</property>
@@ -491,7 +167,7 @@
                 </child>
                 <child>
                   <object class="GtkButton" id="btnConnect">
-                    <property name="label" translatable="yes">VOID</property>
+                    <property name="label" translatable="yes">CONNECT</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -545,6 +221,7 @@
                   <object class="GtkLabel" id="lblConnectionInfo">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
+                    <property name="single_line_mode">True</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -605,7 +282,7 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
-                                <property name="yalign">0.56999999284744263</property>
+                                <signal name="clicked" handler="manageALLFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -619,6 +296,7 @@
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <signal name="clicked" handler="manageNONEFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -646,79 +324,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkFrame" id="frame2">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="label_xalign">0</property>
-                    <property name="shadow_type">none</property>
-                    <child>
-                      <object class="GtkAlignment" id="alignment2">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <child>
-                          <object class="GtkBox" id="box5">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="orientation">vertical</property>
-                            <child>
-                              <object class="GtkToggleButton" id="tbCW">
-                                <property name="label" translatable="yes">CW</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">0</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkToggleButton" id="tbDigi">
-                                <property name="label" translatable="yes">Digi</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="xalign">0.51999998092651367</property>
-                                <property name="yalign">0.51999998092651367</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">1</property>
-                              </packing>
-                            </child>
-                            <child>
-                              <object class="GtkToggleButton" id="tbPhone">
-                                <property name="label" translatable="yes">Phone</property>
-                                <property name="visible">True</property>
-                                <property name="can_focus">True</property>
-                                <property name="receives_default">True</property>
-                              </object>
-                              <packing>
-                                <property name="expand">False</property>
-                                <property name="fill">True</property>
-                                <property name="position">2</property>
-                              </packing>
-                            </child>
-                          </object>
-                        </child>
-                      </object>
-                    </child>
-                    <child type="label">
-                      <object class="GtkLabel" id="label2">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="label" translatable="yes">&lt;b&gt;Mode&lt;/b&gt;</property>
-                        <property name="use_markup">True</property>
-                      </object>
-                    </child>
-                  </object>
-                  <packing>
-                    <property name="expand">True</property>
-                    <property name="fill">True</property>
-                    <property name="position">1</property>
-                  </packing>
+                  <placeholder/>
                 </child>
                 <child>
                   <object class="GtkFrame" id="frame3">
@@ -736,11 +342,12 @@
                             <property name="can_focus">False</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkToggleButton" id="tbDeEu">
+                              <object class="GtkToggleButton" id="DE-EU">
                                 <property name="label" translatable="yes">EU</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <signal name="toggled" handler="manageContinentFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -749,11 +356,12 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkToggleButton" id="tbDeNA">
+                              <object class="GtkToggleButton" id="DE-NA">
                                 <property name="label" translatable="yes">NA</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <signal name="toggled" handler="manageContinentFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -762,11 +370,12 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkToggleButton" id="tbDeSa">
+                              <object class="GtkToggleButton" id="DE-SA">
                                 <property name="label" translatable="yes">SA</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <signal name="toggled" handler="manageContinentFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -775,11 +384,12 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkToggleButton" id="tbDeAs">
+                              <object class="GtkToggleButton" id="DE-AS">
                                 <property name="label" translatable="yes">AS</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <signal name="toggled" handler="manageContinentFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -788,11 +398,12 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkToggleButton" id="tbDeAf">
+                              <object class="GtkToggleButton" id="DE-AF">
                                 <property name="label" translatable="yes">AF</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <signal name="toggled" handler="manageContinentFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -801,11 +412,12 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkToggleButton" id="TbDeOc">
+                              <object class="GtkToggleButton" id="DE-OC">
                                 <property name="label" translatable="yes">OC</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <signal name="toggled" handler="manageContinentFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -814,11 +426,12 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkToggleButton" id="tbDeAn">
+                              <object class="GtkToggleButton" id="DE-AN">
                                 <property name="label" translatable="yes">AN</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <signal name="toggled" handler="manageContinentFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -861,11 +474,12 @@
                             <property name="can_focus">False</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkToggleButton" id="tbDxEu">
+                              <object class="GtkToggleButton" id="DX-EU">
                                 <property name="label" translatable="yes">EU</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <signal name="toggled" handler="manageContinentFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -874,11 +488,12 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkToggleButton" id="tbDxNa">
+                              <object class="GtkToggleButton" id="DX-NA">
                                 <property name="label" translatable="yes">NA</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <signal name="toggled" handler="manageContinentFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -887,11 +502,12 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkToggleButton" id="tbDxSa">
+                              <object class="GtkToggleButton" id="DX-SA">
                                 <property name="label" translatable="yes">SA</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <signal name="toggled" handler="manageContinentFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -900,11 +516,12 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkToggleButton" id="tbDxAs">
+                              <object class="GtkToggleButton" id="DX-AS">
                                 <property name="label" translatable="yes">AS</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <signal name="toggled" handler="manageContinentFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -913,11 +530,12 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkToggleButton" id="tbDxAf">
+                              <object class="GtkToggleButton" id="DX-AF">
                                 <property name="label" translatable="yes">AF</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <signal name="toggled" handler="manageContinentFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -926,11 +544,12 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkToggleButton" id="tbDxOc">
+                              <object class="GtkToggleButton" id="DX-OC">
                                 <property name="label" translatable="yes">OC</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <signal name="toggled" handler="manageContinentFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -939,11 +558,12 @@
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkToggleButton" id="tbDxAn">
+                              <object class="GtkToggleButton" id="DX-AN">
                                 <property name="label" translatable="yes">AN</property>
                                 <property name="visible">True</property>
                                 <property name="can_focus">True</property>
                                 <property name="receives_default">True</property>
+                                <signal name="toggled" handler="manageContinentFilters" swapped="no"/>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -998,8 +618,10 @@
                           <object class="GtkTreeView" id="treeviewCluster">
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
-                            <property name="model">liststoreCluster</property>
-                            <property name="reorderable">True</property>
+                            <property name="vscroll_policy">natural</property>
+                            <property name="model">treeModelFilterCluster</property>
+                            <property name="search_column">2</property>
+                            <property name="enable_grid_lines">both</property>
                             <child internal-child="selection">
                               <object class="GtkTreeSelection" id="treeview-selection"/>
                             </child>
@@ -1013,6 +635,17 @@
                                   <object class="GtkCellRendererText" id="cellrenderertext1"/>
                                   <attributes>
                                     <attribute name="text">0</attribute>
+                                  </attributes>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkTreeViewColumn">
+                                <property name="title" translatable="yes">DE entity</property>
+                                <child>
+                                  <object class="GtkCellRendererText"/>
+                                  <attributes>
+                                    <attribute name="text">9</attribute>
                                   </attributes>
                                 </child>
                               </object>
@@ -1032,6 +665,17 @@
                               </object>
                             </child>
                             <child>
+                              <object class="GtkTreeViewColumn" id="colBand">
+                                <property name="title" translatable="yes">Band</property>
+                                <child>
+                                  <object class="GtkCellRendererText" id="cellrenderband"/>
+                                  <attributes>
+                                    <attribute name="text">6</attribute>
+                                  </attributes>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
                               <object class="GtkTreeViewColumn" id="colDX">
                                 <property name="title" translatable="yes">DX</property>
                                 <property name="clickable">True</property>
@@ -1046,15 +690,12 @@
                               </object>
                             </child>
                             <child>
-                              <object class="GtkTreeViewColumn" id="colTags">
-                                <property name="title" translatable="yes">Tags</property>
-                                <property name="clickable">True</property>
-                                <property name="reorderable">True</property>
-                                <property name="sort_indicator">True</property>
+                              <object class="GtkTreeViewColumn">
+                                <property name="title" translatable="yes">DX entity</property>
                                 <child>
-                                  <object class="GtkCellRendererText" id="cellrenderertext4"/>
+                                  <object class="GtkCellRendererText"/>
                                   <attributes>
-                                    <attribute name="text">3</attribute>
+                                    <attribute name="text">7</attribute>
                                   </attributes>
                                 </child>
                               </object>
@@ -1068,21 +709,21 @@
                                 <child>
                                   <object class="GtkCellRendererText" id="cellrenderertext6"/>
                                   <attributes>
-                                    <attribute name="text">5</attribute>
+                                    <attribute name="text">3</attribute>
                                   </attributes>
                                 </child>
                               </object>
                             </child>
                             <child>
-                              <object class="GtkTreeViewColumn" id="colDate">
-                                <property name="title" translatable="yes">Date</property>
+                              <object class="GtkTreeViewColumn" id="colLocator">
+                                <property name="title" translatable="yes">Locator</property>
                                 <property name="clickable">True</property>
                                 <property name="reorderable">True</property>
                                 <property name="sort_indicator">True</property>
                                 <child>
                                   <object class="GtkCellRendererText" id="cellrenderertext7"/>
                                   <attributes>
-                                    <attribute name="text">6</attribute>
+                                    <attribute name="text">4</attribute>
                                   </attributes>
                                 </child>
                               </object>
@@ -1096,7 +737,7 @@
                                 <child>
                                   <object class="GtkCellRendererText" id="cellrenderertext5"/>
                                   <attributes>
-                                    <attribute name="text">4</attribute>
+                                    <attribute name="text">5</attribute>
                                   </attributes>
                                 </child>
                               </object>
@@ -1111,7 +752,6 @@
                   <object class="GtkLabel" id="label6">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="xpad">13</property>
                     <property name="label" translatable="yes">&lt;b&gt;Cluster&lt;/b&gt;</property>
                     <property name="use_markup">True</property>
                     <property name="wrap">True</property>
@@ -1148,11 +788,12 @@
                     <property name="can_focus">False</property>
                     <property name="column_homogeneous">True</property>
                     <child>
-                      <object class="GtkToggleButton" id="tbSHF">
+                      <object class="GtkToggleButton" id="SHF">
                         <property name="label" translatable="yes">SHF</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">0</property>
@@ -1160,11 +801,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="tbUHF">
+                      <object class="GtkToggleButton" id="UHF">
                         <property name="label" translatable="yes">UHF</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">1</property>
@@ -1172,11 +814,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="tbVHF">
+                      <object class="GtkToggleButton" id="VHF">
                         <property name="label" translatable="yes">VHF</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">2</property>
@@ -1184,11 +827,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="tb4m">
+                      <object class="GtkToggleButton" id="4m">
                         <property name="label" translatable="yes">4m</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">3</property>
@@ -1196,11 +840,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="tb6m">
+                      <object class="GtkToggleButton" id="6m">
                         <property name="label" translatable="yes">6m</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">4</property>
@@ -1208,11 +853,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="tb10m">
+                      <object class="GtkToggleButton" id="10m">
                         <property name="label" translatable="yes">10m</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">5</property>
@@ -1220,11 +866,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="tb12m">
+                      <object class="GtkToggleButton" id="12m">
                         <property name="label" translatable="yes">12m</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">6</property>
@@ -1232,11 +879,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="tb15m">
+                      <object class="GtkToggleButton" id="15m">
                         <property name="label" translatable="yes">15m</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">7</property>
@@ -1244,11 +892,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="tb17m">
+                      <object class="GtkToggleButton" id="17m">
                         <property name="label" translatable="yes">17m</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">8</property>
@@ -1256,11 +905,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="tb20m">
+                      <object class="GtkToggleButton" id="20m">
                         <property name="label" translatable="yes">20m</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">9</property>
@@ -1268,11 +918,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="tb30m">
+                      <object class="GtkToggleButton" id="30m">
                         <property name="label" translatable="yes">30m</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">10</property>
@@ -1280,11 +931,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="tb40m">
+                      <object class="GtkToggleButton" id="40m">
                         <property name="label" translatable="yes">40m</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">11</property>
@@ -1292,11 +944,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="tb60m">
+                      <object class="GtkToggleButton" id="60m">
                         <property name="label" translatable="yes">60m</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">12</property>
@@ -1304,11 +957,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="tb80m">
+                      <object class="GtkToggleButton" id="80m">
                         <property name="label" translatable="yes">80m</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">13</property>
@@ -1316,11 +970,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="tb160m">
+                      <object class="GtkToggleButton" id="160m">
                         <property name="label" translatable="yes">160m</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">14</property>
@@ -1328,11 +983,12 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkToggleButton" id="tbLF">
+                      <object class="GtkToggleButton" id="LF">
                         <property name="label" translatable="yes">LF</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
+                        <signal name="toggled" handler="manageBandFilters" swapped="no"/>
                       </object>
                       <packing>
                         <property name="left_attach">15</property>

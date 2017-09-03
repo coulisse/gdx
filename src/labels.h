@@ -1,3 +1,6 @@
+/******************************************************************************
+FIXED LABELS
+******************************************************************************/
 #define LBL_CONNECT       "Connect"
 #define LBL_DISCONNECT    "Disconnect"
 #define LBL_CONNECTING    "Connecting..."
@@ -12,4 +15,6 @@
 #define LBL_ERR_SELECT	  "select. Error"
 #define LBL_ERR_CONN      "connect failed. Error"
 #define LBL_ERR_PARSE     "Error parsing dx cluster output"
-#define LBL_CONNECTED     "Connected..."
+#define LBL_ERR_JOIN      "ERROR; return code from pthread_join() is"
+#define LBL_ERR_BAND      "Error writing bands file"
+#define LBL_CONNECTED     "Connected"
